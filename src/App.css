@@ -1,0 +1,275 @@
+
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFD0D0;
+    color: #333;
+}
+.main {
+    position: relative;
+    color: white;
+    background-image: url("assets/Map-UI.png.webp");
+    background-size: cover;
+    background-position: center;
+    margin: 0px 0px;
+}
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6); 
+    z-index: 1;
+}
+.main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 0, 0, 0.8); 
+    clip-path: polygon(0 0, 25% 30%, 100% 0, 100% 100%, 0 100%);
+       z-index: 2;
+}
+
+.main > * {
+    position: relative;
+    z-index: 3;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+.logo img{
+    width: 100px;
+    height: 50px;
+}
+
+.waitlist-btn {
+    background-color: rgb(252, 105, 105);
+    border: none;
+    padding: 10px 20px;
+   border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+.waitlist-btn:hover {
+    background-color:red;
+}
+
+.main-section {
+    padding-top: 0%;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 40px 20px;
+    text-align: center;
+    
+}
+  
+.iphone {
+    width: 200px; 
+    height: 400px; 
+    background-image: url("src/assets/iphone13-Layout.png"); 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+.image-content {
+    width: calc(200px - 20px); 
+    height: calc(400px - 20px); 
+    object-fit: cover; 
+    border-radius: 15px; 
+    z-index: 1;
+}
+
+.intro {
+     margin: 0px 0px;
+    max-width: 600px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly ;
+} 
+.image{
+     width: 100px;
+     height: 50px;
+     position: relative;
+     right: 100px;
+}
+
+
+section {
+  
+ background-color: pink;
+ 
+}
+
+.footer {
+    padding: 10px 10px 0px 10px;
+    text-align: center;
+    bottom: 0;
+   
+    height: 40px;
+    color: white;
+    background-color: black;
+}
+.inputs{
+    background-color: #FFD0D0;
+    height: 70vh;
+    margin-top: 0;
+}
+
+.para{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color:#E14D2A;
+    font-family: sans-serif;
+}
+
+.inputs form div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+.butto{
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    
+}
+
+.inputs form input{
+    margin-top: 40px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+}
+
+
+
+/* CSS */
+.butto {
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+  background-color: rgb(225, 184, 106);
+  border: 2px solid #E14D2A;
+  border-radius: 30px;
+  box-shadow: #E14D2A 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.butto {
+  background-color: #fff;
+}
+
+.butto:active {
+  box-shadow: orange 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+.butti {
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+  border: 2px solid orange;
+  border-radius: 30px;
+  box-shadow: pink 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.butti {
+  background-color: #fff;
+}
+
+.butti:active {
+  box-shadow: orange 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+
+@media (min-width: 768px) {
+  .butto {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 768px) {
+    .main-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .inputs form div {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .inputs form input {
+        width: 80%;
+        margin: 10px 0; 
+    }
+}
+
+@media (max-width: 768px) {
+    .inputs form div {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .inputs form input {
+        width: 50%; 
+        margin: 10px; 
+    }
+}
