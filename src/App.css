@@ -9,7 +9,7 @@ body {
 .main {
     position: relative;
     color: white;
-    background-image: url("assets/Map-UI.png.webp");
+    background-image: url("src/assets/Map-UI.png.webp");
     background-size: cover;
     background-position: center;
     margin: 0px 0px;
